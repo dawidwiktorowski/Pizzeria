@@ -1,0 +1,9 @@
+<Context>
+    <Resource name = "jdbc/pizzeria"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              uername="root"
+              password="xxx"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mssql://localhost:3306/pizzeria?serverTimezone=UTC"/>
+</Context>
