@@ -69,7 +69,7 @@ a:hover {
 
 header {
     height: 100vh;
-    background-image: url(images/pizza1.jpg);
+    background-image: url(../img/pizza1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -488,194 +488,6 @@ aside.show {
     }
 }
 
-/*Sekcja slogan*/
-.slogan {
-    text-align: center;
-    background-image: url(images/800_1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-}
-
-.slogan h1 {
-    font-family: 'Saira Condensed',
-    sans-serif;
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-
-}
-
-.slogan p {
-    font-family: 'Saira Condensed',
-    sans-serif;
-    font-size: 18px;
-}
-
-.slogan p.promortion {
-    margin-top: 20px;
-    font-size: 12px;
-}
-
-.slogan .bg {
-    padding: 30px 10px;
-    background-color: rgba(0, 63, 114, 0.4);
-}
-
-@media (orientation: landscape) {
-    .slogan p {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .slogan .bg {
-        padding: 50px 10px;
-
-    }
-
-    .slogan h1 {
-        font-size: 48px;
-        margin-bottom: 35px;
-
-    }
-
-    .slogan p {
-        font-size: 26px;
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .slogan p.promotion {
-        margin-top: 40px;
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    .slogan .bg {
-        padding: 80px 10px;
-
-    }
-
-    .slogan h1 {
-        font-size: 60px;
-        margin-bottom: 55px;
-
-    }
-
-    .slogan p {
-        font-size: 40px;
-        width: 50%;
-    }
-
-    .slogan p.promotion {
-        margin-top: 20px;
-        font-size: 26px;
-    }
-}
-
-
-/*Sekcja cennik*/
-
-.cennik {
-    text-align: center;
-    background-image: url(images/800_18.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-}
-
-.cennik h1 {
-    text-align: center;
-    font-family: 'Saira Condensed',
-    sans-serif;
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-
-}
-
-.cennik h2 {
-    text-align: center;
-    font-family: 'Saira Condensed',
-    sans-serif;
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.cennik p {
-    font-family: 'Saira Condensed',
-    sans-serif;
-    font-size: 18px;
-}
-
-.cennik .ceny {
-    padding: 30px 10px;
-    background-color: rgba(0, 63, 114, 0.4);
-}
-
-@media (orientation: landscape) {
-    .cennik p {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .cennik .ceny {
-        padding: 50px 10px;
-
-    }
-
-    .cennik h1 {
-        font-size: 48px;
-        margin-bottom: 35px;
-
-    }
-
-    .cennik h2 {
-        font-size: 35px;
-    }
-
-    .cennik p {
-        font-size: 26px;
-        width: 60%;
-        margin: 0 auto;
-    }
-
-}
-
-@media (min-width: 1024px) {
-
-    .cennik .ceny {
-        padding: 80px 10px;
-
-    }
-
-    .cennik h1 {
-        font-size: 60px;
-        margin-bottom: 55px;
-
-    }
-
-    .cennik p {
-        font-size: 40px;
-        width: 50%;
-    }
-
-}
-
 /*Sekcja galeria*/
 .galeria {
     max-width: 1920px;
@@ -694,19 +506,19 @@ aside.show {
 }
 
 .galeria .item:nth-of-type(1) {
-    background-image: url(images/pizzeria1.jpg);
+    background-image: url(../img/pizzeria1.jpg);
 }
 
 .galeria .item:nth-of-type(2) {
-    background-image: url(images/pizzeria2.jpg);
+    background-image: url(../img/pizzeria2.jpg);
 }
 
 .galeria .item:nth-of-type(3) {
-    background-image: url(images/pizzeria3.jpg);
+    background-image: url(../img/pizzeria3.jpg);
 }
 
 .galeria .item:nth-of-type(4) {
-    background-image: url(images/pizzeria4.jpg);
+    background-image: url(../img/pizzeria4.jpg);
 }
 
 .galeria .item p {
@@ -823,7 +635,6 @@ aside.show {
 
 .contact iframe {
     width: 100%;
-    font-size: 100px;
     margin-bottom: 25px;
     font-size: 12px;
     padding: 5px;
