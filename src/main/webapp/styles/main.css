@@ -1,0 +1,922 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+
+    content: "";
+    display: block;
+    clear: both;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: #000;
+    z-index: 1;
+}
+
+nav p {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    color: white;
+    font-size: 60px;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 1%;
+}
+
+li {
+    flex-basis: 15%;
+
+}
+
+nav ul li a {
+
+    display: block;
+    font-size: 32px;
+    background-color: red;
+
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+
+}
+
+a:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+header {
+    height: 100vh;
+    background-image: url(images/pizza1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Saira Condensed',
+    sans-serif;
+    margin: 30px auto;
+
+
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    height: 71%;
+    right: -40%;
+
+}
+
+header hgroup {
+
+    text-align: center;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+    width: 100vw;
+
+
+
+}
+
+header button {
+    font-family: 'Saira', sans-serif;
+    z-index: 1;
+    position: relative;
+    top: 70%;
+    margin-left: 1%;
+    line-height: 30px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 12px;
+    border: 2px solid grey;
+
+
+
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+
+}
+
+header h1 {
+    font-size: 150px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 100vh;
+}
+
+header h2 {
+
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    z-index: 1;
+}
+
+/*Hamburgerek*/
+
+
+.burger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    line-height: 50px;
+    transition: .3s linear;
+    z-index: 2;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+aside {
+
+    position: absolute;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: gray;
+    transition: .3s linear;
+    z-index: 2;
+}
+
+.fas {
+    display: none;
+    color: gray;
+}
+
+i.show {
+    display: block;
+}
+
+aside.show {
+    left: 0;
+
+
+}
+
+.active ul {
+    position: absolute;
+    display: flex;
+    height: calc(100% - 20px);
+    flex-wrap: wrap;
+    margin: 0 10px;
+    padding: 0;
+    list-style-type: none;
+    align-content: flex-start;
+}
+
+.active ul li {
+    height: 30px;
+    background: #ffffff;
+    flex-basis: 100%;
+    margin-top: 20px;
+    color: black;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+.active ul li a {
+    display: flex;
+    font-size: 20px;
+
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+.active ul li a:hover {
+    color: red;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+
+
+
+/* Sekcja oferta*/
+
+.features {
+    max-width: 1600px;
+    margin: 50px auto 0;
+    padding: 5%;
+    text-align: center;
+
+}
+
+.features h1 {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+.features h2 {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.features p {
+    font-family: 'Saira',
+    sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.features img {
+    width: 100%;
+    margin: 5px 0;
+    max-width: 375px;
+}
+
+@media (min-width:360px) {
+    .features h1 {
+        font-size: 28px;
+    }
+
+    .features h2 {
+        font-size: 24px;
+    }
+
+    .features p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:768px) {
+    .features h1 {
+        font-size: 36px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .features p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:1024px) {
+    .features {
+        margin-top: 50px;
+        padding: 5% 2%;
+        text-align: center;
+
+    }
+
+    .feature {
+        float: left;
+        width: 33%;
+        padding: 20px;
+    }
+
+    .features h1 {
+        font-size: 36px;
+    }
+
+    .features h2 {
+        font-size: 22px;
+    }
+
+    .features p {
+        font-size: 16px;
+        line-height: 120%;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width:1600px) {
+
+
+    .feature {
+
+        padding: 20px 50px;
+    }
+
+    .features h1 {
+        font-size: 60px;
+    }
+
+    .features h2 {
+        font-size: 32px;
+    }
+
+    .features p {
+        font-size: 21px;
+        line-height: 140%;
+        padding: 0 10px;
+    }
+}
+
+.portfolio {
+    background-color: black;
+    padding: 10px 0 30px;
+}
+
+.portfolio h1 {
+    font-size: 28px;
+    font-family: 'Saira Condensed',
+    sans-serif;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.portfolio .web img {
+    width: 100%;
+}
+
+.portfolio .about {
+    color: white;
+    font-family: 'Saira',
+    sans-serif;
+    font-weight: normal;
+    padding: 10px 20px 20px 0;
+    text-align: left;
+}
+
+.portfolio .about h2 {
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    text-indent: 20px;
+}
+
+.portfolio .about p {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.portfolio .project {
+    max-width: 1400px;
+    margin: 0 auto 20px;
+}
+
+.portfolio .project:nth-of-type(odd) {
+    background-color: #ff4f2c;
+}
+
+.portfolio .project:nth-of-type(even) {
+    background-color: #29a6dc;
+}
+
+@media (min-width:768px) {
+
+    .portfolio h1 {
+        font-size: 40px;
+    }
+
+    .portfolio .about h2 {
+        font-size: 28px;
+        text-indent: 40px;
+    }
+
+    .portfolio .about p {
+        font-size: 18px;
+        padding-left: 40px;
+    }
+
+    .portfolio .project {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (orientation: landscape) {
+
+    .web,
+    .about {
+        width: 50%;
+        float: left;
+    }
+
+    .web img {
+        display: block;
+    }
+
+    .portfolio .project:nth-of-type(even) .web {
+        float: right;
+
+    }
+
+    .portfolio .project:nth-of-type(even) .about {
+        padding-right: 0;
+    }
+
+    .portfolio .project:nth-of-type(even) .about p {
+        padding-right: 20px;
+    }
+
+    .portfolio .project:nth-of-type(even) .about h2 {
+        text-indent: 0;
+        margin-left: 40px;
+    }
+
+
+}
+
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    .portfolio h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
+
+    .portfolio .about h2 {
+        padding-top: 50px;
+        font-size: 28px;
+        text-indent: 40px;
+        margin-bottom: 50px;
+    }
+
+    .portfolio .about p {
+        font-size: 18px;
+        padding-left: 40px;
+        line-height: 180%;
+    }
+
+    .portfolio .project {
+        margin-bottom: 40px;
+    }
+}
+
+/*Sekcja slogan*/
+.slogan {
+    text-align: center;
+    background-image: url(images/800_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.slogan h1 {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+}
+
+.slogan p {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 18px;
+}
+
+.slogan p.promortion {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.slogan .bg {
+    padding: 30px 10px;
+    background-color: rgba(0, 63, 114, 0.4);
+}
+
+@media (orientation: landscape) {
+    .slogan p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .slogan .bg {
+        padding: 50px 10px;
+
+    }
+
+    .slogan h1 {
+        font-size: 48px;
+        margin-bottom: 35px;
+
+    }
+
+    .slogan p {
+        font-size: 26px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .slogan p.promotion {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .slogan .bg {
+        padding: 80px 10px;
+
+    }
+
+    .slogan h1 {
+        font-size: 60px;
+        margin-bottom: 55px;
+
+    }
+
+    .slogan p {
+        font-size: 40px;
+        width: 50%;
+    }
+
+    .slogan p.promotion {
+        margin-top: 20px;
+        font-size: 26px;
+    }
+}
+
+
+/*Sekcja cennik*/
+
+.cennik {
+    text-align: center;
+    background-image: url(images/800_18.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.cennik h1 {
+    text-align: center;
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+}
+
+.cennik h2 {
+    text-align: center;
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.cennik p {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 18px;
+}
+
+.cennik .ceny {
+    padding: 30px 10px;
+    background-color: rgba(0, 63, 114, 0.4);
+}
+
+@media (orientation: landscape) {
+    .cennik p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cennik .ceny {
+        padding: 50px 10px;
+
+    }
+
+    .cennik h1 {
+        font-size: 48px;
+        margin-bottom: 35px;
+
+    }
+
+    .cennik h2 {
+        font-size: 35px;
+    }
+
+    .cennik p {
+        font-size: 26px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .cennik .ceny {
+        padding: 80px 10px;
+
+    }
+
+    .cennik h1 {
+        font-size: 60px;
+        margin-bottom: 55px;
+
+    }
+
+    .cennik p {
+        font-size: 40px;
+        width: 50%;
+    }
+
+}
+
+/*Sekcja galeria*/
+.galeria {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.galeria .item {
+    height: 30vh;
+}
+
+.galeria .item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.galeria .item:nth-of-type(1) {
+    background-image: url(images/pizzeria1.jpg);
+}
+
+.galeria .item:nth-of-type(2) {
+    background-image: url(images/pizzeria2.jpg);
+}
+
+.galeria .item:nth-of-type(3) {
+    background-image: url(images/pizzeria3.jpg);
+}
+
+.galeria .item:nth-of-type(4) {
+    background-image: url(images/pizzeria4.jpg);
+}
+
+.galeria .item p {
+    font-family: 'Saira',
+    sans-serif;
+    color: white;
+    text-align: center;
+    /*line-height: 25vh;*/
+    text-shadow: 0 0 4px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.galeria h1 {
+    font-family: 'Saira condensed',
+    sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+@media (min-width:533px) {
+    .galeria .item {
+        float: left;
+        width: 50%;
+        height: 40vh;
+        background-size: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .galeria h1 {
+        font-size: 48px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+
+    }
+
+    .galeria .item p {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+
+    .galeria .item {
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .galeria .item p {
+        padding: 0;
+        line-height: 40vh;
+        opacity: 0;
+        transition: 1s;
+        cursor: default;
+    }
+
+    .galeria .item:hover p {
+        opacity: 1;
+    }
+
+    .galeria .item {
+        background-size: 100%;
+        transition: 1s;
+    }
+
+    .galeria .item:hover {
+        background-size: 130%;
+    }
+
+}
+
+@media (min-width:1600px) {
+
+    .galeria h1 {
+        font-size: 60px;
+        margin-top: 50px;
+        margin-bottom: 45px;
+
+    }
+
+    .galeria .item p {
+        font-size: 40px;
+    }
+
+
+
+}
+
+/* sekcja contact */
+
+.contact {
+    background-color: #000;
+    padding: 30px 20px;
+}
+
+.contact h1 {
+    font-family: 'Saira Condensed',
+    sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.contact .wrap {
+    padding-top: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.contact iframe {
+    width: 100%;
+    font-size: 100px;
+    margin-bottom: 25px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.contact button {
+    font-size: 14px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.contact .socials {
+    padding-top: 30px;
+    font-size: 0;
+}
+
+.contact .social {
+
+    padding: 10px 0;
+    color: white;
+    font-family: saira condensed, sans-serif;
+}
+
+.contact .social img {
+    float: left;
+
+}
+
+.contact .social span {
+    line-height: 72px;
+    padding-left: 20px;
+    float: left;
+    font-size: 20px;
+    margin-right: -101px;
+}
+
+@media (min-width: 533px) {
+    .contact .social {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contact h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
+
+    .contact form,
+    .contact .socials {
+        float: left;
+        width: 50%;
+        padding: 0 20px
+    }
+
+    .contact .social {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .contact iframe,
+    .contact button,
+    .contact textarea {
+        margin-bottom: 35px;
+
+    }
+
+
+    .contact button {
+        font-size: 20px;
+        line-height: 50px;
+        transition: .3s;
+        cursor: pointer;
+
+    }
+
+    .contact button:hover {
+        color: black;
+        background-color: #fff;
+    }
+}
+
+
+footer {
+    background-color: aqua;
+    color: white;
+    font-family: saira, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
