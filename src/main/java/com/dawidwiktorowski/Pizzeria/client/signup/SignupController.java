@@ -2,15 +2,13 @@ package com.dawidwiktorowski.Pizzeria.client.signup;
 
 import com.dawidwiktorowski.Pizzeria.domain.api.UserRegistration;
 import com.dawidwiktorowski.Pizzeria.domain.api.UserService;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet
+@WebServlet("/signup")
 public class SignupController extends HttpServlet {
     private final UserService userService = new UserService();
 
@@ -20,17 +18,16 @@ public class SignupController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserRegistration userRegistration = getUserData(request);
         userService.register(userRegistration);
         response.sendRedirect(request.getContextPath());
     }
 
     private UserRegistration getUserData(HttpServletRequest request) {
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
+        String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        return new UserRegistration(firstName, lastName, email, password);
+        return new UserRegistration(username, email, password);
     }
 }

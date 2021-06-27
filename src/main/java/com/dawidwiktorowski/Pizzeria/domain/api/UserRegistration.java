@@ -1,24 +1,18 @@
 package com.dawidwiktorowski.Pizzeria.domain.api;
 
 public class UserRegistration {
-    private String firstName;
-    private String lastName;
+    private String username;
     private String email;
     private String password;
 
-    public UserRegistration(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public UserRegistration(String username, String email, String password) {
+        this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
     public String getEmail() {

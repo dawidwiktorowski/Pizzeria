@@ -16,91 +16,50 @@ html {
     scroll-behavior: smooth;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 10vh;
-    width: 100vw;
-    background-color: #000;
-    z-index: 1;
-}
-
-nav p {
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    color: white;
-    font-size: 60px;
-
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 50px;
-    margin-top: 1%;
-}
-
-li {
-    flex-basis: 15%;
-
-}
-
-nav ul li a {
-
-    display: block;
-    font-size: 32px;
-    background-color: red;
-
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 15px;
-
-}
-
-a:hover {
-    background-color: rgba(255, 0, 0, 0.7);
-}
-
 header {
     height: 100vh;
-    background-image: url(../img/pizza1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #ffffff;
     position: relative;
     overflow-x: hidden;
     font-family: 'Saira Condensed',
     sans-serif;
-    margin: 30px auto;
+
+
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
+
+.img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/pizza-glowna.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+    top: 0;
+    left: 0;
 
 
 }
 
-header img {
-    position: absolute;
-    bottom: 0;
-    height: 71%;
-    right: -40%;
+nav {
 
+    text-align: center;
+    font-size: 80px;
+    margin-top: 10%;
 }
 
 header hgroup {
-
-    text-align: center;
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 50px;
+    z-index: 1;
+    text-align: left;
     color: white;
-    width: 100vw;
-
-
-
+    position: absolute;
+    top: 8%;
+    left: 40%;
+    text-transform: uppercase;
+    font-size: 90px;
 }
 
 header button {
@@ -108,41 +67,40 @@ header button {
     z-index: 1;
     position: relative;
     top: 70%;
-    margin-left: 1%;
+    margin-left: 49%;
     line-height: 30px;
     padding: 0 15px;
     text-transform: uppercase;
-    color: black;
+    color: white;
     text-decoration: none;
     background-color: transparent;
-    font-size: 12px;
+    font-size: 32px;
     border: 2px solid grey;
+    display: block;
 
 
+}
 
+.button1{
+    margin-left: 55%;
 }
 
 header a {
     text-decoration: none;
-    color: black;
+    color: white;
 
 }
 
 header h1 {
-    font-size: 150px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    line-height: 100vh;
+    font-size: 9rem;
 }
 
 header h2 {
-
-    font-size: 30px;
+    margin-top: 5%;
+    font-size: 5rem;
     font-weight: 400;
     text-align: center;
-    z-index: 1;
 }
-
 /*Hamburgerek*/
 
 

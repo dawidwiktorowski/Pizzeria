@@ -12,7 +12,7 @@ public class BaseDAO {
 
     public BaseDAO(){
         try {
-            this.dataSource= DataSourceProvider.getDaraSource();
+            this.dataSource= DataSourceProvider.getDataSource();
         }catch (NamingException e){
             throw new RuntimeException(e);
         }

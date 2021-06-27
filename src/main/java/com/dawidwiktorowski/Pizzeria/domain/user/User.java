@@ -4,15 +4,13 @@ import java.time.LocalDateTime;
 
 public class User {
     private Integer id;
-    private String firstName;
-    private String lastName;
+    private String username;
     private String email;
     private String password;
     private LocalDateTime registrationDate;
 
-    public User(String firstName, String lastName, String email, String password, LocalDateTime registrationDate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String username, String email, String password, LocalDateTime registrationDate) {
+        this.username = username;
         this.email = email;
         this.password = password;
         this.registrationDate = registrationDate;
@@ -22,12 +20,8 @@ public class User {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
     public String getEmail() {
@@ -44,5 +38,9 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

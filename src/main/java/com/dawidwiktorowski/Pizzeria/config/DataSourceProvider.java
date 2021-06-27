@@ -9,7 +9,7 @@ public class DataSourceProvider {
     private static DataSource dataSource;
     private DataSourceProvider(){}
 
-    public static DataSource getDaraSource() throws NamingException{
+    public static DataSource getDataSource() throws NamingException{
         if(dataSource == null){
             Context initContext = new InitialContext();
             Context envContext = (Context) initContext.lookup("java:comp/env/");
