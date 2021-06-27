@@ -53,7 +53,7 @@ public class OrderDAO extends BaseDAO {
         final String stockLevel = """
                 UPDATE
                     stock_level 
-                    setttt
+                    set
                     conditionn = conditionn - 1
                 WHERE
                     name = ?;
